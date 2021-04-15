@@ -38,10 +38,6 @@ jobs:
       # Ejecuta prueba de construcción de app Android
       - name: Run-Lint
         run: ./gradlew lint
-         
-      # Construcción del proyecto
-      - name: Build-Project
-        run: ./gradlew assemble
 
       # Reporte de lint
       - name: Upload html test report
