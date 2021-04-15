@@ -36,12 +36,19 @@ jobs:
         run: chmod +x ./gradlew
         
       # Ejecuta prueba de construcción de app Android
-      - name: Run-Tests
+      - name: Run-Lint
         run: ./gradlew lint
          
       # Construcción del proyecto
       - name: Build-Project
         run: ./gradlew assemble
+
+      # Reporte de lint
+      - name: Upload html test report
+          uses: actions/upload-artifact@v2
+          with:
+            name: lint_html_report
+            path: app/build/reports/lint-results-debug.html
         
     
         
