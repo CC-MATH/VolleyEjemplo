@@ -37,7 +37,7 @@ jobs:
         
       # Ejecuta prueba de construcción de app Android
       - name: Run-Tests
-        run: ./gradlew test
+        run: ./gradlew lint
          
       # Construcción del proyecto
       - name: Build-Project
